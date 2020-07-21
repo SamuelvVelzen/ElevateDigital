@@ -10,13 +10,25 @@ module.exports = {
 			"screen-2": "50vh",
 		},
 		extend: {
+			width: {
+				"3/10": "30%",
+			},
 			colors: {
-				primary: "#FBDAB4",
-				dark: "#3F3636",
+				primary: {
+					lighter: "#FAF4D0",
+					default: "#F5E4C3",
+				},
+				secondary: {
+					default: "#FAF4D0",
+					dark: "#C14545",
+				},
+				dark: "#0E2431",
 			},
 		},
 	},
-	variants: {},
+	variants: {
+		margin: ["responsive", "last"],
+	},
 	plugins: [],
 	purge: {
 		// Learn more on https://tailwindcss.com/docs/controlling-file-size/#removing-unused-css
