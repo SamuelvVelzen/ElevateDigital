@@ -5,7 +5,17 @@
  ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
  */
 module.exports = {
-	theme: {},
+	theme: {
+		height: {
+			"screen-2": "50vh",
+		},
+		extend: {
+			colors: {
+				primary: "#FBDAB4",
+				dark: "#3F3636",
+			},
+		},
+	},
 	variants: {},
 	plugins: [],
 	purge: {
