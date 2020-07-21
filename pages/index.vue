@@ -1,6 +1,6 @@
 <template>
-	<article class="h-screen-2">
-		<p>hoi</p>
+	<article class="h-screen flex flex-col">
+		<Cards :cards-content="page" />
 	</article>
 </template>
 
@@ -34,3 +34,15 @@ export default Vue.extend({});
 	padding-top: 15px;
 }
 </style>
+
+<script>
+export default {
+	async asyncData({ $content }) {
+		const page = await $content("index").where({ title: "cards" }).fetch();
+
+		return {
+			page,
+		};
+	},
+};
+</script>
