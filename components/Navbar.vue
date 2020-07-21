@@ -1,6 +1,6 @@
 <template>
 	<nav
-		class="sticky top-0 py-4 px-10 sm:px-20 flex justify-around bg-primary items-center"
+		class="sticky top-0 flex justify-around bg-primary items-center px-4 sm:px-16 md:px-20 lg:px-24"
 	>
 		<span class="text-2xl font-bold">Samuel.</span>
 		<nuxt-link to="#" class="ml-auto">Test</nuxt-link>

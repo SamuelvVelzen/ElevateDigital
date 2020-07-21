@@ -1,6 +1,6 @@
 <template>
 	<section
-		class="flex flex-row flex-wrap justify-between bg-dark rounded-md sm:px-20 sm:py-4"
+		class="flex flex-row flex-wrap justify-between bg-dark sm:px-8 md:px-12 lg:px-16 sm:p-8"
 	>
 		<Card
 			:title="cardsContent.card1"

@@ -1,5 +1,5 @@
 <template>
-	<article class="h-screen flex flex-col">
+	<article class="h-screen flex flex-col mx-4 sm:mx-8">
 		<Cards :cards-content="page" />
 	</article>
 </template>

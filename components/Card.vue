@@ -1,5 +1,7 @@
 <template>
-	<div class="bg-primary sm:my-4 py-4 px-10 sm:rounded-md w-full lg:w-3/10">
+	<div
+		class="bg-primary sm:rounded-md w-full lg:w-3/10 pb-8 sm:pb-4 sm:mb-8 lg:mb-0 last:mb-0"
+	>
 		<h2 class="text-xl font-bold text-center pb-3">
 			{{ title }}
 		</h2>
