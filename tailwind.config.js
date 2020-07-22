@@ -6,8 +6,15 @@
  */
 module.exports = {
 	theme: {
+		fontFamily: {
+			default:
+				'"Montserrat","Source Sans Pro", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";',
+		},
 		height: {
 			"screen-2": "50vh",
+		},
+		maxWidth: {
+			"1/2": "50%",
 		},
 		extend: {
 			width: {
