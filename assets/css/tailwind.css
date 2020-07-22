@@ -1,8 +1,13 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
+
 @import "tailwindcss/utilities";
 
-/* @font-face {
+h1 {
+	@apply text-4xl;
+}
+
+@font-face {
 	font-family: Montserrat;
 	font-weight: normal;
 	src: url("./../fonts/Montserrat-Regular.ttf") format("ttf");
@@ -12,4 +17,4 @@
 	font-family: MontserratBold;
 	font-weight: bold;
 	src: url("./../fonts/Montserrat-Bold.ttf") format("ttf");
-} */
+}
