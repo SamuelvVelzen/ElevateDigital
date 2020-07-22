@@ -1,6 +1,8 @@
 <template>
 	<article class="h-screen flex flex-col mx-4 sm:mx-8">
-		<Cards :cards-content="page" />
+		<!-- <Cards :cards-content="page" /> -->
+		<image-text :image-content="page" />
+		<!-- <nuxt-content :document="page" /> -->
 	</article>
 </template>
 
@@ -38,7 +40,8 @@ export default Vue.extend({});
 <script>
 export default {
 	async asyncData({ $content }) {
-		const page = await $content("index").where({ title: "cards" }).fetch();
+		// const page = await $content("index").where({ title: "cards" }).fetch();
+		const page = await $content("index/imagetext").fetch();
 
 		return {
 			page,
