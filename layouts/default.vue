@@ -7,15 +7,12 @@
 
 <style>
 html {
-	font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont,
-		"Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	@apply font-default text-base tracking-normal;
 
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
-
-	@apply font-mono text-base tracking-normal;
 }
 
 *,
