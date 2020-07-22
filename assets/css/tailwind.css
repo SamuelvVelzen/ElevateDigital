@@ -7,6 +7,18 @@ h1 {
 	@apply text-4xl;
 }
 
+h2 {
+	@apply text-2xl;
+}
+
+h3 {
+	@apply text-xl;
+}
+
+.nuxt-content p {
+	@apply pb-4;
+}
+
 @font-face {
 	font-family: Montserrat;
 	font-weight: normal;
