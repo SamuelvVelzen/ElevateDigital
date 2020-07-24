@@ -1,7 +1,7 @@
 <template>
-	<article class="h-screen flex flex-col mx-4 sm:mx-8">
+	<article class="flex flex-col mx-4 sm:mx-8 lg:max-w-3/4 lg:mx-auto">
 		<!-- <Cards :cards-content="page" /> -->
-		<image-text :image-content="page" />
+		<image-text :image-content="image" />
 		<Texts :texts="page" />
 	</article>
 </template>
@@ -41,10 +41,11 @@ export default Vue.extend({});
 export default {
 	async asyncData({ $content }) {
 		// const page = await $content("index").where({ title: "cards" }).fetch();
-		// const page = await $content("index/imagetext").fetch();
+		const image = await $content("index/imagetext").fetch();
 		const page = await $content("index/texts").fetch();
 
 		return {
+			image,
 			page,
 		};
 	},
