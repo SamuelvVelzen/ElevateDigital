@@ -1,7 +1,7 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 
-@import "./components/navbar.css";
+@import "./components/navbar.scss";
 
 @import "tailwindcss/utilities";
 

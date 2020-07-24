@@ -1,10 +1,8 @@
 ---
-title: test
-img: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon1024.png 
-alt: Logo Title Text 1
-description: hallo hallo
+img: images/Samuel.png
+alt: Plaatje van mezelf :D
 ---
 
-# My first blog post
+# Hi, welkom op mijn portfolio
 
-Welcome to my first blog post using content module 
+Hier laat ik jullie mijn verschillende aspecten zien van mijn professionele ervaringen. Zoals de verschillende talen en methodes waarmee ik al ervaring heb.
