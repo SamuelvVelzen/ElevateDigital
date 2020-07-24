@@ -1,0 +1,153 @@
+.menu-icon-line {
+	height: 2px;
+	width: 25px;
+	transition: background 0.8s ease;
+
+	animation: closedMid 0.8s backwards;
+	animation-direction: reverse;
+
+	@apply bg-dark block relative;
+}
+
+.menu-icon-line::before,
+.menu-icon-line::after {
+	content: "";
+	transition: background 0.8s ease;
+
+	@apply bg-dark absolute h-full w-full;
+}
+
+.menu-icon-line::before {
+	transform: translateY(-8px);
+
+	animation: closedTop 0.8s backwards;
+	animation-direction: reverse;
+}
+
+.menu-icon-line::after {
+	transform: translateY(8px);
+
+	animation: closedBottom 0.8s backwards;
+	animation-direction: reverse;
+}
+
+.open .menu-icon-line {
+	animation: openMid 0.8s forwards;
+}
+.open .menu-icon-line::before {
+	animation: openTop 0.8s forwards;
+}
+
+.open .menu-icon-line::after {
+	animation: openBottom 0.8s forwards;
+}
+
+.navLinks {
+	transition: all 1s ease;
+}
+
+@media (max-width: 640px) {
+	.open .navLinks {
+		animation: slideDown 0.8s forwards;
+	}
+
+	.closing .navLinks {
+		animation: slideUp 0.3s forwards;
+		overflow: hidden;
+	}
+
+	.navLinks {
+		display: none;
+	}
+}
+
+@keyframes slideDown {
+	0% {
+		transform: translateY(-50%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes slideUp {
+	0% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(-100%);
+		opacity: 0;
+	}
+}
+
+@keyframes openTop {
+	0% {
+		transform: translateY(-5px) rotate(0deg);
+	}
+	50% {
+		transform: translateY(0px) rotate(0deg);
+	}
+	100% {
+		transform: translateY(0px) rotate(90deg);
+	}
+}
+
+@keyframes openMid {
+	50% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(45deg);
+	}
+}
+
+@keyframes openBottom {
+	0% {
+		transform: translateY(5px) rotate(0deg);
+	}
+	50% {
+		transform: translateY(0px) rotate(0deg);
+	}
+	100% {
+		transform: translateY(0px) rotate(90deg);
+	}
+}
+
+@keyframes closedTop {
+	0% {
+		transform: translateY(-5px) rotate(0deg);
+	}
+	50% {
+		transform: translateY(0px) rotate(0deg);
+	}
+	100% {
+		transform: translateY(0px) rotate(90deg);
+	}
+}
+
+@keyframes closedMid {
+	50% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(90deg);
+	}
+}
+
+@keyframes closedBottom {
+	0% {
+		transform: translateY(5px) rotate(0deg);
+	}
+	50% {
+		transform: translateY(0px) rotate(0deg);
+	}
+	100% {
+		transform: translateY(0px) rotate(90deg);
+	}
+}
