@@ -18,9 +18,9 @@
 				closing ? 'w-full flex justify-between' : '',
 			]"
 		>
-			<nuxt-link to="#" class="sm:ml-auto navLink">Test</nuxt-link>
-			<nuxt-link to="#" class="ml-4 navLink">Test</nuxt-link>
-			<nuxt-link to="#" class="ml-4 navLink">Test</nuxt-link>
+			<nuxt-link to="#" class="sm:ml-auto">Test</nuxt-link>
+			<nuxt-link to="#" class="ml-4">Test</nuxt-link>
+			<nuxt-link to="#" class="ml-4">Test</nuxt-link>
 		</div>
 	</nav>
 </template>
