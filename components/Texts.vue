@@ -8,9 +8,9 @@
 export default {
 	props: {
 		texts: {
-			type: String,
+			type: Object,
 			default: () => {
-				return "";
+				return {};
 			},
 		},
 	},

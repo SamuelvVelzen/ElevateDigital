@@ -1,6 +1,8 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 
+@import "./components/navbar.css";
+
 @import "tailwindcss/utilities";
 
 h1 {
@@ -15,10 +17,6 @@ h3 {
 	@apply text-xl;
 }
 
-.nuxt-content p {
-	@apply pb-4;
-}
-
 @font-face {
 	font-family: Montserrat;
 	font-weight: normal;
@@ -29,4 +27,8 @@ h3 {
 	font-family: MontserratBold;
 	font-weight: bold;
 	src: url("./../fonts/Montserrat-Bold.ttf") format("ttf");
+}
+
+.nuxt-content p:not(p:last-of-type) {
+	@apply pb-4;
 }

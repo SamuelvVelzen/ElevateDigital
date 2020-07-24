@@ -10,15 +10,23 @@ module.exports = {
 			default:
 				'"Montserrat","Source Sans Pro", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";',
 		},
-		height: {
-			"screen-2": "50vh",
-		},
 		maxWidth: {
 			"1/2": "50%",
+			"3/4": "75%",
 		},
 		extend: {
 			width: {
 				"3/10": "30%",
+			},
+			height: {
+				"screen-2": "50vh",
+			},
+			opacity: {
+				"95": "95%",
+			},
+			padding: {
+				"px-10": "10px",
+				navbar: "60px",
 			},
 			colors: {
 				primary: {
@@ -31,10 +39,14 @@ module.exports = {
 				},
 				dark: "#0E2431",
 			},
+			inset: {
+				"1/8": "12.5%",
+			},
 		},
 	},
 	variants: {
 		margin: ["responsive", "last"],
+		borderWidth: ["responsive", "hover"],
 	},
 	plugins: [],
 	purge: {
