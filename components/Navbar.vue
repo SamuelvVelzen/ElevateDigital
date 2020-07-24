@@ -1,6 +1,6 @@
 <template>
 	<nav
-		class="fixed w-full flex justify-between bg-primary items-center py-3 px-4 sm:px-16 md:px-20 lg:px-16 lg:max-w-3/4 lg:mx-auto z-50 opacity-95 flex-wrap lg:left-1/8"
+		class="fixed w-full flex justify-between bg-primary items-center py-2 px-4 sm:px-16 md:px-20 lg:px-16 lg:max-w-3/4 lg:mx-auto z-50 opacity-95 flex-wrap lg:left-1/8"
 		:class="([open ? 'open' : null, closing ? 'closing' : null])"
 	>
 		<span class="text-2xl font-bold">Samuel.</span>
