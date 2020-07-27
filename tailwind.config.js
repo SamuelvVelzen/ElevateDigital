@@ -37,7 +37,10 @@ module.exports = {
 					default: "#FAF4D0",
 					dark: "#C14545",
 				},
-				dark: "#0E2431",
+				dark: {
+					lighter: "#6e5e5e",
+					default: "#3F3636",
+				},
 			},
 			inset: {
 				"1/8": "12.5%",
