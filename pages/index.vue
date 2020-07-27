@@ -3,6 +3,7 @@
 		<!-- <Cards :cards-content="page" /> -->
 		<image-text :image-content="image" />
 		<Texts :texts="page" />
+		<Gallery :gallery-content="galleryObject" />
 	</article>
 </template>
 
@@ -12,41 +13,26 @@ import Vue from "vue";
 export default Vue.extend({});
 </script>
 
-<style>
-.title {
-	font-family: "Quicksand", "Source Sans Pro", -apple-system,
-		BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
-		sans-serif;
-	display: block;
-	font-weight: 300;
-	font-size: 100px;
-	color: #35495e;
-	letter-spacing: 1px;
-}
-
-.subtitle {
-	font-weight: 300;
-	font-size: 42px;
-	color: #526488;
-	word-spacing: 5px;
-	padding-bottom: 15px;
-}
-
-.links {
-	padding-top: 15px;
-}
-</style>
-
 <script>
 export default {
 	async asyncData({ $content }) {
-		// const page = await $content("index").where({ title: "cards" }).fetch();
 		const image = await $content("index/imagetext").fetch();
 		const page = await $content("index/texts").fetch();
+		const galleryObject = {
+			img1: {
+				url: "images/gallery.jpg",
+				alt: "wow background image swag",
+			},
+			img2: {
+				url: "images/gallery.jpg",
+				alt: "nice swag",
+			},
+		};
 
 		return {
 			image,
 			page,
+			galleryObject,
 		};
 	},
 };
