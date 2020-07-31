@@ -46,6 +46,16 @@
 	transition: all 1s ease;
 }
 
+@media (min-width: 640px) {
+	nav .nuxt-link-exact-active {
+		box-shadow: 0px 5px 0px 0px rgba(251, 218, 180, 1);
+	}
+
+	nav .company {
+		box-shadow: none;
+	}
+}
+
 @media (max-width: 640px) {
 	.navbar-enter-active {
 		animation: navbarOpening 0.8s;
@@ -53,6 +63,7 @@
 	.navbar-leave-active {
 		animation: navbarClosing 0.8s;
 	}
+
 	@keyframes navbarOpening {
 		0% {
 			transform: translateY(-75%);
