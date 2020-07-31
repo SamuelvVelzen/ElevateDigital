@@ -39,7 +39,7 @@ module.exports = {
 				},
 				dark: {
 					lighter: "#6e5e5e",
-					default: "#3F3636",
+					default: "#3C3737",
 				},
 			},
 			inset: {
