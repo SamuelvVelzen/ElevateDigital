@@ -49,3 +49,12 @@ h1,
 .nuxt-content p:not(:last-of-type) {
 	@apply pb-4;
 }
+
+.dark {
+	@apply bg-dark;
+}
+
+.dark .nuxt-content h1,
+.dark .nuxt-content p {
+	@apply text-primary;
+}
