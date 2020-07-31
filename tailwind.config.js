@@ -30,17 +30,20 @@ module.exports = {
 			},
 			colors: {
 				primary: {
-					lighter: "#FAF4D0",
-					default: "#F5E4C3",
+					default: "#339A68",
 				},
 				secondary: {
-					default: "#FAF4D0",
-					dark: "#C14545",
+					default: "#29724F",
+				},
+				light: {
+					default: "#FBDAB4",
 				},
 				dark: {
-					lighter: "#6e5e5e",
 					default: "#3C3737",
 				},
+			},
+			boxShadow: {
+				primary: "0px 5px 5px rgba(51, 154, 104, 0.25)",
 			},
 			inset: {
 				"1/8": "12.5%",
