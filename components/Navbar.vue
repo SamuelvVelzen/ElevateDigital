@@ -1,21 +1,21 @@
 <template>
   <nav
-    class="sticky top-0 w-full flex flex-wrap justify-between bg-dark items-center py-2 z-50 opacity-95"
+    class="fixed w-full flex flex-wrap justify-between bg-dark items-center py-2 z-50 opacity-95"
     :class="open ? 'open' : null"
   >
-    <nuxt-link to="/" class="text-2xl font-bold text-light">Samuel.</nuxt-link>
+    <nuxt-link to="/" class="text-2xl font-bold text-light company">Samuel.</nuxt-link>
     <label class="menu-icon sm:hidden cursor-pointer ml-auto pt-px-10 pb-px-10" @click="mobileNav">
       <span class="menu-icon-line block"></span>
     </label>
 
     <transition name="navbar">
       <div
-        class="navLinksTest sm:block sm:w-auto sm:transition-none border-t-2 border-light sm:border-t-0 w-full flex flex-wrap justify-between"
+        class="sm:block sm:w-auto sm:transition-none border-t-2 border-light sm:border-t-0 w-full flex flex-wrap justify-between"
         v-if="open"
       >
-        <nuxt-link to="#" class="mb-4 text-light w-full">Test</nuxt-link>
-        <nuxt-link to="#" class="mb-4 text-light w-full">Test</nuxt-link>
-        <nuxt-link to="#" class="mb-4 text-light w-full">Test</nuxt-link>
+        <nuxt-link to="/" class="sm:ml-4 my-2 sm:pb-3 text-light w-full">Introductie</nuxt-link>
+        <nuxt-link to="/timeline" class="sm:ml-4 my-2 sm:pb-3 text-light w-full">Tijdlijn</nuxt-link>
+        <nuxt-link to="/login" class="sm:ml-4 my-2 sm:pb-3 text-light w-full">Inloggen</nuxt-link>
       </div>
     </transition>
   </nav>
@@ -25,7 +25,7 @@
 export default {
   data() {
     return {
-      open: true,
+      open: false,
     };
   },
 
@@ -41,7 +41,6 @@ export default {
   },
   methods: {
     mobileNav() {
-      console.log(this.open);
       if (this.open) {
         this.open = false;
       } else {
