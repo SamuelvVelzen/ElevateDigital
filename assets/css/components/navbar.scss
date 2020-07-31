@@ -6,7 +6,7 @@
 	animation: closedMid 0.8s backwards;
 	animation-direction: reverse;
 
-	@apply bg-dark block relative;
+	@apply bg-light block relative;
 }
 
 .menu-icon-line::before,
@@ -14,7 +14,7 @@
 	content: "";
 	transition: background 0.8s ease;
 
-	@apply bg-dark absolute h-full w-full;
+	@apply bg-light absolute h-full w-full;
 }
 
 .menu-icon-line::before {

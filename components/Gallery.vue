@@ -1,8 +1,5 @@
 <template>
-  <section
-    class="gallery flex overflow-x-hidden my-4 mx-4 sm:mx-12 md:mx-16 lg:mx-20 relative"
-    :style="cssProps"
-  >
+  <section class="gallery flex overflow-x-hidden my-8 relative md:mx-16" :style="cssProps">
     <div class="images flex h-full w-full">
       <img
         v-for="n in galleryContent"

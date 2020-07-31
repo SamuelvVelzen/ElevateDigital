@@ -1,5 +1,5 @@
 <template>
-  <article class="flex flex-col sm:mx-4 lg:max-w-3/4 lg:mx-auto">
+  <article class="flex flex-col">
     <!-- <Cards :cards-content="page" /> -->
     <image-text :image-content="image" />
     <Texts :content="page" />

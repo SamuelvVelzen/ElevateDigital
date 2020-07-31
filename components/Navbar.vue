@@ -1,21 +1,21 @@
 <template>
   <nav
-    class="fixed w-full flex justify-between bg-light items-center py-2 px-4 sm:px-16 md:px-20 lg:px-16 lg:max-w-3/4 lg:mx-auto z-50 opacity-95 flex-wrap lg:left-1/8"
+    class="sticky top-0 w-full flex flex-wrap justify-between bg-dark items-center py-2 z-50 opacity-95"
     :class="open ? 'open' : null"
   >
-    <nuxt-link to="/" class="text-2xl font-bold">Samuel.</nuxt-link>
+    <nuxt-link to="/" class="text-2xl font-bold text-light">Samuel.</nuxt-link>
     <label class="menu-icon sm:hidden cursor-pointer ml-auto pt-px-10 pb-px-10" @click="mobileNav">
       <span class="menu-icon-line block"></span>
     </label>
 
     <transition name="navbar">
       <div
-        class="navLinksTest sm:block sm:w-auto sm:transition-none border-t-2 border-dark sm:border-t-0 w-full flex justify-between"
+        class="navLinksTest sm:block sm:w-auto sm:transition-none border-t-2 border-light sm:border-t-0 w-full flex flex-wrap justify-between"
         v-if="open"
       >
-        <nuxt-link to="#" class="sm:ml-auto">Test</nuxt-link>
-        <nuxt-link to="#" class="ml-4">Test</nuxt-link>
-        <nuxt-link to="#" class="ml-4">Test</nuxt-link>
+        <nuxt-link to="#" class="mb-4 text-light w-full">Test</nuxt-link>
+        <nuxt-link to="#" class="mb-4 text-light w-full">Test</nuxt-link>
+        <nuxt-link to="#" class="mb-4 text-light w-full">Test</nuxt-link>
       </div>
     </transition>
   </nav>

@@ -1,5 +1,5 @@
 <template>
-  <section class="px-4 py-4 sm:px-12 md:px-16 lg:px-16" :class="textClass">
+  <section class="md:px-16 py-8" :class="textClass">
     <nuxt-content :document="content" />
   </section>
 </template>
