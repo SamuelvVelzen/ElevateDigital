@@ -1,6 +1,6 @@
 <template>
-	<div class="bg-primary">
-		<Navbar />
-		<Nuxt class="text-primary pt-navbar" />
-	</div>
+  <div class="bg-light">
+    <Navbar />
+    <Nuxt class="text-light pt-navbar" />
+  </div>
 </template>

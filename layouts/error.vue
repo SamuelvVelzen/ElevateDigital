@@ -1,5 +1,5 @@
 <template>
-  <article class="flex flex-col justify-center items-center bg-primary h-screen w-screen">
+  <article class="flex flex-col justify-center items-center bg-light h-screen w-screen">
     <h1>Error</h1>
     <p>
       <span class="font-bold">{{ this.$route.path }}</span> pagina bestaat
