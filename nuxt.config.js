@@ -32,7 +32,7 @@ export default {
 	/*
 	 ** Global CSS
 	 */
-	css: [],
+	css: ["@assets/css/main.scss"],
 	/*
 	 ** Plugins to load before mounting the App
 	 ** https://nuxtjs.org/guide/plugins
@@ -55,6 +55,7 @@ export default {
 		"@nuxtjs/axios",
 		// Doc: https://github.com/nuxt/content
 		"@nuxt/content",
+		"bootstrap-vue/nuxt",
 	],
 	/*
 	 ** Axios module configuration
@@ -66,6 +67,13 @@ export default {
 	 ** See https://content.nuxtjs.org/configuration
 	 */
 	content: {},
+
+	bootstrapVue: {
+		icons: true,
+		bootstrapCSS: false,
+		bootstrapVueCSS: false,
+		config: {},
+	},
 	/*
 	 ** Build configuration
 	 ** See https://nuxtjs.org/api/configuration-build/
