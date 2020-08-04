@@ -1,7 +1,7 @@
 <template>
-	<nav>
-		<b-navbar toggleable="sm" type="dark" variant="dark">
-			<b-navbar-brand to="/">NavBar</b-navbar-brand>
+	<b-navbar toggleable="sm" type="dark" variant="dark" :sticky="true">
+		<div class="container text-light">
+			<b-navbar-brand to="/">Samuel.</b-navbar-brand>
 
 			<b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -12,8 +12,8 @@
 					<b-nav-item to="/login">Inloggen</b-nav-item>
 				</b-navbar-nav>
 			</b-collapse>
-		</b-navbar>
-	</nav>
+		</div>
+	</b-navbar>
 </template>
 
 <script>
