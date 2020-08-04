@@ -4,7 +4,7 @@
     <image-text :image-content="image" />
     <Texts :content="page" />
     <Gallery :gallery-content="galleryObject" />
-    <Texts :content="page" :textClass="'dark'" />
+    <Texts :content="page" class="'dark'" />
     <Texts :content="page" />
     <Gallery :gallery-content="galleryObject" />
   </article>
