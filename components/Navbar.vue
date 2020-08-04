@@ -1,21 +1,36 @@
 <template>
   <nav
-    class="fixed w-full flex flex-wrap justify-between bg-dark items-center py-2 z-50 opacity-95"
+    class="fixed w-full flex flex-wrap justify-between items-center z-50 opacity-95 sm:bg-dark overflow-hidden"
     :class="open ? 'open' : null"
   >
-    <nuxt-link to="/" class="text-2xl font-bold text-light company">Samuel.</nuxt-link>
-    <label class="menu-icon sm:hidden cursor-pointer ml-auto pt-px-10 pb-px-10" @click="mobileNav">
-      <span class="menu-icon-line block"></span>
-    </label>
-
+    <div
+      class="bg-dark px-4 py-2 sm:px-8 md:px-16 lg:px-32 xl:px-64 w-full sm:w-auto flex items-center border-b-2 border-light sm:border-none"
+    >
+      <nuxt-link to="/" class="text-2xl font-bold text-light company">Samuel.</nuxt-link>
+      <label
+        class="menu-icon sm:hidden cursor-pointer ml-auto pt-px-10 pb-px-10"
+        @click="mobileNav"
+      >
+        <span class="menu-icon-line block"></span>
+      </label>
+    </div>
     <transition name="navbar">
       <div
-        class="sm:block sm:w-auto sm:transition-none border-t-2 border-light sm:border-t-0 w-full flex flex-wrap justify-between"
+        class="sm:block sm:w-auto sm:transition-none w-full flex flex-wrap justify-between bg-dark px-4 sm:px-8 md:px-16 lg:px-32 xl:px-64"
         v-if="open"
       >
-        <nuxt-link to="/" class="sm:ml-4 my-2 sm:pb-3 text-light w-full">Introductie</nuxt-link>
-        <nuxt-link to="/timeline" class="sm:ml-4 my-2 sm:pb-3 text-light w-full">Tijdlijn</nuxt-link>
-        <nuxt-link to="/login" class="sm:ml-4 my-2 sm:pb-3 text-light w-full">Inloggen</nuxt-link>
+        <nuxt-link
+          to="/"
+          class="navLink relative sm:ml-4 my-2 sm:pb-3 text-light w-full"
+        >Introductie</nuxt-link>
+        <nuxt-link
+          to="/timeline"
+          class="navLink relative sm:ml-4 my-2 sm:pb-3 text-light w-full"
+        >Tijdlijn</nuxt-link>
+        <nuxt-link
+          to="/login"
+          class="navLink relative sm:ml-4 my-2 sm:pb-3 text-light w-full"
+        >Inloggen</nuxt-link>
       </div>
     </transition>
   </nav>
@@ -25,7 +40,7 @@
 export default {
   data() {
     return {
-      open: false,
+      open: true,
     };
   },
 
