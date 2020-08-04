@@ -1,10 +1,4 @@
-@import "tailwindcss/base";
-
 @import "./components/navbar.scss";
-
-@import "tailwindcss/components";
-
-@import "tailwindcss/utilities";
 
 @font-face {
 	font-family: Montserrat;
