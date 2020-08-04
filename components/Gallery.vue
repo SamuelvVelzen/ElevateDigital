@@ -1,13 +1,11 @@
 <template>
-	<section>
+	<b-container>
 		<b-carousel
 			id="carousel-1"
 			:interval="4000"
 			controls
 			indicators
 			background="light"
-			img-width="1024"
-			img-height="480"
 		>
 			<b-carousel-slide
 				v-for="n in galleryContent"
@@ -16,7 +14,7 @@
 				:img-alt="n.alt"
 			></b-carousel-slide>
 		</b-carousel>
-	</section>
+	</b-container>
 </template>
 
 <script>
