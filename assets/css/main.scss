@@ -40,6 +40,10 @@ html {
 	padding: 0;
 }
 
+.content > * {
+	padding: 1.5rem 0;
+}
+
 .carousel-control-prev {
 	width: 5%;
 
@@ -58,4 +62,8 @@ html {
 
 .carousel-indicators li {
 	background-color: var(--dark);
+}
+
+p:last-of-type {
+	margin-bottom: 0;
 }

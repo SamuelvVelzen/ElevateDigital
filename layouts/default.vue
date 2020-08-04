@@ -1,7 +1,7 @@
 <template>
 	<div class="bg-light">
 		<Navbar />
-		<Nuxt />
+		<Nuxt class="content" />
 	</div>
 </template>
 
