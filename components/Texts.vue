@@ -1,6 +1,6 @@
 <template>
 	<b-container v-bind:class="{ 'bg-dark text-light': fluid }" :fluid="fluid">
-		<b-container v-if="fluid">
+		<b-container v-if="fluid" class="p-0">
 			<nuxt-content :document="content" />
 		</b-container>
 
