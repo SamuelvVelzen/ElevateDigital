@@ -1,5 +1,5 @@
 <template>
-	<b-container>
+	<b-container class="mb-5">
 		<b-row>
 			<b-col offset="2" offset-md="1" cols="10" md="11" class="p-0">
 				<h5 class="font-weight-bold mb-0">Titel</h5>
@@ -30,8 +30,8 @@
 		border: 2px solid var(--dark);
 		background-color: var(--light);
 
-		height: 25px;
-		width: 25px;
+		height: 26px;
+		width: 26px;
 	}
 
 	&inner {
@@ -43,8 +43,8 @@
 
 		background-color: var(--dark);
 
-		height: 14px;
-		width: 14px;
+		height: 13px;
+		width: 13px;
 	}
 }
 
