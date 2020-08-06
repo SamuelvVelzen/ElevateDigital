@@ -1,17 +1,17 @@
 <template>
-  <div class="bg-light">
-    <Navbar class />
-    <Nuxt class="text-light px-4 sm:px-8 md:px-0 lg:px-16 xl:p-x-15% pt-navbar" />
-  </div>
+	<div class="bg-light">
+		<Navbar />
+		<Nuxt class="content" />
+	</div>
 </template>
 
 <style scoped>
 .page-enter-active,
 .page-leave-active {
-  transition: opacity 0.5s;
+	transition: opacity 0.5s;
 }
 .page-enter,
 .page-leave-to {
-  opacity: 0;
+	opacity: 0;
 }
-</style>>
+</style>

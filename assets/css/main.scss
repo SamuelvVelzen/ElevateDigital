@@ -13,6 +13,7 @@
 $primary: #339a68;
 $secondary: #29724f;
 $light: #fbdab4;
+$light_h: #fbdab4bf;
 $dark: #3c3737;
 
 $font-family-base: "Montserrat", "Source Sans Pro", system-ui, -apple-system,
@@ -40,6 +41,27 @@ html {
 	padding: 0;
 }
 
+nav {
+	.navbar-brand,
+	.navbar-nav .nav-item a:hover {
+		color: $light !important;
+	}
+
+	.navbar-nav .nav-item .nav-link {
+		color: $light !important;
+		color: $light_h !important;
+
+		&.nuxt-link-exact-active {
+			font-weight: bold;
+			color: $light !important;
+		}
+	}
+}
+
+.content > * {
+	padding: 1.5rem 0;
+}
+
 .carousel-control-prev {
 	width: 5%;
 
@@ -58,4 +80,9 @@ html {
 
 .carousel-indicators li {
 	background-color: var(--dark);
+	outline: none;
+}
+
+p:last-of-type {
+	margin-bottom: 0;
 }
