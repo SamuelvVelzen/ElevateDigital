@@ -27,11 +27,16 @@
 		display: block;
 		position: relative;
 
-		border: 2px solid var(--dark);
+		border-width: 2px;
+		border-style: solid;
+		border-color: transparent;
+		border-top-color: var(--dark);
+		transform: rotate(45deg);
+
 		background-color: var(--light);
 
-		height: 26px;
-		width: 26px;
+		height: 40px;
+		width: 40px;
 	}
 
 	&inner {
@@ -43,8 +48,8 @@
 
 		background-color: var(--dark);
 
-		height: 13px;
-		width: 13px;
+		height: 20px;
+		width: 20px;
 	}
 }
 
@@ -53,7 +58,7 @@
 	position: absolute;
 	width: calc(100% - 20px);
 	margin-right: 5px;
-	top: 50%;
+	top: 46%;
 	transform: translateY(-50%);
 
 	height: 2px;
