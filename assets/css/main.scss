@@ -11,6 +11,7 @@
 }
 
 $primary: #339a68;
+$primary_h: #339a683f;
 $secondary: #29724f;
 $light: #fbdab4;
 $light_h: #fbdab4bf;
@@ -70,8 +71,11 @@ nav {
 	}
 }
 
-.content > * {
-	padding: 1.5rem 15px;
+.content {
+	padding-top: 56px;
+	& > * {
+		padding: 1.5rem 15px;
+	}
 }
 
 .carousel-control-prev {
@@ -91,10 +95,14 @@ nav {
 }
 
 .carousel-indicators li {
-	background-color: var(--dark);
+	background-color: $dark;
 	outline: none;
 }
 
 p:last-of-type {
 	margin-bottom: 0;
+}
+
+button.btn-success:hover {
+	box-shadow: 0px 5px 5px $primary_h;
 }

@@ -1,9 +1,12 @@
 <template>
-	<b-navbar toggleable="sm" variant="dark" :sticky="true">
+	<b-navbar toggleable="sm" variant="dark" fixed="top">
 		<b-container>
 			<b-navbar-brand tag="h1" to="/">Samuel.</b-navbar-brand>
 
-			<b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+			<b-navbar-toggle
+				target="nav-collapse"
+				class="p-0"
+			></b-navbar-toggle>
 
 			<b-collapse id="nav-collapse" is-nav>
 				<b-navbar-nav class="ml-auto">
