@@ -5,9 +5,11 @@
 
 			<div class="position-relative">
 				<span class="h-line"></span>
-				<timeline-item />
-				<timeline-item />
-				<timeline-item />
+				<timeline-item
+					v-for="timelineItem in timelineItems"
+					:item="timelineItem"
+					:key="timelineItem.id"
+				/>
 			</div>
 		</b-container>
 	</article>
@@ -25,3 +27,13 @@
 	background-color: var(--dark);
 }
 </style>
+
+<script>
+export default {
+	computed: {
+		timelineItems() {
+			return this.$store.getters.getTimelineItems;
+		},
+	},
+};
+</script>
