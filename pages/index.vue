@@ -1,5 +1,5 @@
 <template>
-	<article class="flex flex-col body">
+	<article>
 		<image-text :image-content="image" />
 		<Texts :content="page" />
 		<Gallery :gallery-content="galleryObject" />
