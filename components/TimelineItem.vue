@@ -2,7 +2,7 @@
 	<b-container class="mb-5">
 		<b-row>
 			<b-col offset="2" offset-md="1" cols="10" md="11" class="p-0">
-				<h5 class="font-weight-bold mb-0">Titel</h5>
+				<h5 class="font-weight-bold mb-0">{{ item.title }}</h5>
 			</b-col>
 			<b-col md="12" class="position-relative p-0">
 				<span class="circle-outer rounded-circle">
@@ -11,10 +11,7 @@
 				<span class="line"></span>
 			</b-col>
 			<b-col offset="2" offset-md="1" cols="10" md="11" class="p-0">
-				lorem ipsum lalallalalla lorem ipsum lalallalalla lorem ipsum
-				lalallalalla lorem ipsum lalallalalla lorem ipsum lalallalalla
-				lorem ipsum lalallalalla lorem ipsum lalallalalla lorem ipsum
-				lalallalalla
+				{{ item.description }}
 			</b-col>
 		</b-row>
 	</b-container>
@@ -65,3 +62,14 @@
 	background-color: var(--dark);
 }
 </style>
+
+<script>
+export default {
+	props: {
+		item: {
+			type: Object,
+			default: {},
+		},
+	},
+};
+</script>
