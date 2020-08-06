@@ -1,6 +1,6 @@
 <template>
 	<b-navbar toggleable="sm" variant="dark" :sticky="true">
-		<b-container class="p-0">
+		<b-container>
 			<b-navbar-brand tag="h1" to="/">Samuel.</b-navbar-brand>
 
 			<b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
