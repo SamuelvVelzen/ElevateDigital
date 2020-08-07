@@ -1,11 +1,18 @@
 <template>
 	<article>
-		<image-text :image-content="image" />
-		<Texts :content="page" />
-		<Gallery :gallery-content="galleryObject" />
-		<Texts :content="page" :fluid="true" />
-		<Texts :content="page" />
-		<Gallery :gallery-content="galleryObject" />
+		<template v-for="(introductionItem, index) in introductionItems">
+			<section :key="index">
+				<component
+					:is="introductionItem.type"
+					:content="introductionItem.content"
+				/>
+
+				<Gallery
+					v-if="introductionItem.gallery"
+					:content="introductionItem.gallery"
+				/>
+			</section>
+		</template>
 	</article>
 </template>
 
@@ -16,34 +23,19 @@ export default Vue.extend({});
 </script>
 
 <script>
-export default {
-	async asyncData({ $content }) {
-		const image = await $content("index/imagetext").fetch();
-		const page = await $content("index/texts").fetch();
-		const galleryObject = {
-			img1: {
-				url: "images/Html.png",
-				alt: "HTML logo",
-			},
-			img2: {
-				url: "images/Css.png",
-				alt: "Css Logo",
-			},
-			img3: {
-				url: "images/Js.png",
-				alt: "JavaScript Logo",
-			},
-			img4: {
-				url: "images/RN.png",
-				alt: "React Native Logo",
-			},
-		};
+import ImageText from "./../components/ImageText";
+import Texts from "./../components/Texts";
+import Gallery from "./../components/Gallery";
 
-		return {
-			image,
-			page,
-			galleryObject,
-		};
+export default {
+	components: { ImageText, Texts, Gallery },
+	data: () => {
+		return {};
+	},
+	computed: {
+		introductionItems() {
+			return this.$store.getters.getIntroductionItems;
+		},
 	},
 };
 </script>
