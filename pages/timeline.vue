@@ -19,7 +19,7 @@
 .h-line {
 	display: block;
 	position: absolute;
-	left: 20px;
+	left: 19px;
 
 	height: 100%;
 	width: 2px;

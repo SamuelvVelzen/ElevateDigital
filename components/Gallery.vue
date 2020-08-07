@@ -8,10 +8,10 @@
 			background="light"
 		>
 			<b-carousel-slide
-				v-for="n in galleryContent"
-				:key="n.alt"
-				:img-src="showImage(n.url)"
-				:img-alt="n.alt"
+				v-for="(item, index) in content"
+				:key="index"
+				:img-src="require('../assets/' + item.img)"
+				:img-alt="item.alt"
 			></b-carousel-slide>
 		</b-carousel>
 	</b-container>
@@ -20,10 +20,10 @@
 <script>
 export default {
 	props: {
-		galleryContent: {
-			type: Object,
+		content: {
+			type: Array,
 			default: () => {
-				return {};
+				return [];
 			},
 		},
 	},
