@@ -28,12 +28,14 @@
 		border-style: solid;
 		border-color: transparent;
 		border-top-color: var(--dark);
-		transform: rotate(45deg);
+		transform: rotate(42deg);
 
 		background-color: var(--light);
 
 		height: 40px;
 		width: 40px;
+
+		background: linear-gradient(135deg, var(--light) 55%, transparent 45%);
 	}
 
 	&inner {
@@ -53,8 +55,8 @@
 .line {
 	display: block;
 	position: absolute;
-	width: calc(100% - 20px);
-	margin-right: 5px;
+	width: calc(100% - 5px);
+	margin-left: 5px;
 	top: 46%;
 	transform: translateY(-50%);
 
