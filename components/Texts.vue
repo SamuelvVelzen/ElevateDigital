@@ -1,10 +1,21 @@
 <template>
 	<b-container v-bind:class="{ 'bg-dark text-light': fluid }" :fluid="fluid">
-		<b-container v-if="fluid" class="p-0">
+		<b-container v-if="fluid" :key="index">
 			<nuxt-content :document="content" />
+			<h1>{{ content.title }}</h1>
+
+			<template v-for="(item, index) in content.paragraphs">
+				<p :key="index">{{ item }}</p>
+			</template>
 		</b-container>
 
-		<nuxt-content v-else :document="content" />
+		<template v-else>
+			<h1>{{ content.title }}</h1>
+
+			<template v-for="(item, index) in content.paragraphs">
+				<p :key="index">{{ item }}</p>
+			</template>
+		</template>
 	</b-container>
 </template>
 

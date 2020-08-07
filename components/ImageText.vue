@@ -2,10 +2,15 @@
 	<b-container>
 		<b-row align-v="center">
 			<b-col cols="12" md="6" class="order-2 order-md-1">
-				<nuxt-content :document="imageContent" />
+				<h1 class="title">{{ content.title }}</h1>
+				<p class="subtitle">{{ content.subtitle }}</p>
 			</b-col>
 			<b-col cols="12" md="6" class="mb-md-0 mb-4 order-md-10 order-1">
-				<img class="w-100" :src="showImage()" :alt="imageContent.alt" />
+				<img
+					class="w-100"
+					:src="require('../assets/' + content.img)"
+					:alt="content.alt"
+				/>
 			</b-col>
 		</b-row>
 	</b-container>
@@ -14,7 +19,7 @@
 <script>
 export default {
 	props: {
-		imageContent: {
+		content: {
 			type: Object,
 			default: () => {
 				return {};
@@ -23,7 +28,7 @@ export default {
 	},
 	methods: {
 		showImage() {
-			return require("../assets/" + this.imageContent.img);
+			return require("../assets/" + this.content.img);
 		},
 	},
 };
