@@ -1,18 +1,4 @@
 <template>
-	<!-- <div
-		class="flex flex-col justify-center items-center bg-light h-screen w-screen"
-	>
-		<h1>Error</h1>
-		<p>
-			<span class="font-bold">{{ this.$route.path }}</span> pagina bestaat
-			niet
-		</p>
-
-		<div class="mt-4 text-center">
-			<p>Probeer deze link</p>
-			<nuxt-link to="/" class="underline">Startpagina</nuxt-link>
-		</div>
-	</div> -->
 	<article class="vh-100">
 		<b-container class="h-100 w-100">
 			<h1>Error</h1>
