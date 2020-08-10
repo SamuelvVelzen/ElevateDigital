@@ -1,46 +1,18 @@
 <template>
 	<article class="vh-100">
-		<b-container class="h-100 w-100">
+		<b-container class="w-100 h-100">
 			<h1>Inloggen</h1>
+
 			<b-container
-				fluid="sm"
-				class="d-flex flex-wrap justify-content-center buttons p-0"
+				class="d-flex p-0 flex-column flex-sm-row buttons align-items-center justify-content-center"
 			>
-				<!-- <b-button variant="success" class="w-100 mt-auto mb-2 mw-10">
-					Button
+				<b-button variant="success" class="">
+					Inloggen bij Apple
 				</b-button>
 
-				<b-button variant="success" class="w-100 mb-auto mt-2"
-					>Button</b-button
-				> -->
-
-				<b-row class="w-100">
-					<b-col
-						class="p-0 mb-3"
-						cols="12"
-						sm="8"
-						md="4"
-						offset-sm="2"
-						offset-md="4"
-						align-self="end"
-					>
-						<b-button variant="success" class="w-100">
-							Inloggen bij Apple
-						</b-button>
-					</b-col>
-					<b-col
-						class="p-0 mt-3"
-						cols="12"
-						sm="8"
-						md="4"
-						offset-sm="2"
-						offset-md="4"
-					>
-						<b-button variant="success" class="w-100">
-							Inloggen bij Google
-						</b-button></b-col
-					>
-				</b-row>
+				<b-button variant="success" class="mt-4 mt-sm-0 ml-sm-4">
+					Inloggen bij Google
+				</b-button>
 			</b-container>
 		</b-container>
 	</article>
@@ -48,6 +20,6 @@
 
 <style lang="scss" scoped>
 .buttons {
-	height: calc(100% - 48px);
+	height: calc(100% - 56px);
 }
 </style>
