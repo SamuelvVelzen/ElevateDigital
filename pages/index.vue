@@ -1,10 +1,18 @@
 <template>
 	<article>
 		<template v-for="(introductionItem, index) in introductionItems">
-			<section :key="index">
+			<section
+				:key="index"
+				v-bind:class="{
+					'bg-dark text-light': introductionItem.type.darkmode,
+				}"
+			>
 				<component
-					:is="introductionItem.type"
+					:is="
+						introductionItem.type.component || introductionItem.type
+					"
 					:content="introductionItem.content"
+					:darkmode="introductionItem.type.darkmode"
 				/>
 
 				<Gallery
