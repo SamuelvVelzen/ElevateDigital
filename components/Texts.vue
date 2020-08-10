@@ -1,6 +1,6 @@
 <template>
-	<b-container v-bind:class="{ 'bg-dark text-light': fluid }" :fluid="fluid">
-		<b-container v-if="fluid" :key="index">
+	<b-container :fluid="darkmode">
+		<b-container v-if="darkmode" :key="index">
 			<nuxt-content :document="content" />
 			<h1>{{ content.title }}</h1>
 
@@ -22,7 +22,7 @@
 <script>
 export default {
 	props: {
-		fluid: {
+		darkmode: {
 			type: Boolean,
 			default: false,
 		},
