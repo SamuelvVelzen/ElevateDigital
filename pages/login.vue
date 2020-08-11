@@ -24,9 +24,7 @@
 				</b-iconstack>
 			</div>
 
-			<b-container
-				class="d-flex p-0 flex-column buttons align-items-center justify-content-center"
-			>
+			<b-container class="mt-4 p-0">
 				<div
 					class="d-flex flex-column flex-sm-row w-100 justify-content-center"
 				>
@@ -40,12 +38,7 @@
 				</div>
 				<hr class="w-100" />
 
-				<b-form
-					@submit="onSubmit"
-					@reset="onReset"
-					v-if="reset"
-					class="w-100"
-				>
+				<b-form @submit="onSubmit" @reset="onReset" v-if="reset">
 					<b-form-group
 						id="input-group-1"
 						label="E-mail:"
