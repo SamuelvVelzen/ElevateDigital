@@ -48,16 +48,16 @@
 				>
 					<b-form-group
 						id="input-group-1"
-						label="Username:"
+						label="E-mail:"
 						label-for="input-1"
 						class="font-weight-bold"
 					>
 						<b-form-input
 							id="input-1"
-							v-model="form.username"
+							v-model="form.email"
 							required
-							placeholder="Enter username"
-							autocomplete="username"
+							placeholder="Enter e-mail"
+							autocomplete="email"
 						></b-form-input>
 					</b-form-group>
 
@@ -108,7 +108,7 @@ export default {
 	data() {
 		return {
 			form: {
-				username: "",
+				email: "",
 				password: "",
 			},
 
@@ -126,7 +126,7 @@ export default {
 		onReset(evt) {
 			evt.preventDefault();
 			// Reset our form values
-			this.form.username = "";
+			this.form.email = "";
 			this.form.password = "";
 
 			// Trick to reset/clear native browser form validation state
