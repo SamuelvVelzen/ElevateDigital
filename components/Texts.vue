@@ -1,6 +1,6 @@
 <template>
 	<b-container :fluid="darkmode">
-		<b-container v-if="darkmode" :key="index">
+		<b-container v-if="darkmode">
 			<nuxt-content :document="content" />
 			<h1>{{ content.title }}</h1>
 
