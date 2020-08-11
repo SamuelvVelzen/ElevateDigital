@@ -28,7 +28,7 @@
 				class="d-flex p-0 flex-column flex-sm-row buttons align-items-center justify-content-center"
 			>
 				<b-form
-					@submit="onSubmit"
+					@submit.prevent="onSubmit"
 					@reset="onReset"
 					v-if="reset"
 					class="w-100"
@@ -76,6 +76,8 @@
 </template>
 
 <script>
+import Auth from "./../assets/logics/auth";
+
 export default {
 	data() {
 		return {
@@ -92,9 +94,32 @@ export default {
 			this.$router.push("/" + path);
 		},
 		onSubmit(evt) {
-			evt.preventDefault();
-			this.$router.push("/login");
-			console.log(this.form);
+			new Auth()
+				.createUser(this.form.email, this.form.password)
+				.then((result) => {
+					this.$router.push("/login");
+					setTimeout(() => {
+						this.$bvToast.toast(
+							`You can log in using ${this.form.email} and your password`,
+							{
+								title: "Success | account created",
+								variant: "success",
+								toaster: "b-toaster-bottom-right",
+								autoHideDelay: 2500,
+								appendToast: false,
+							}
+						);
+					}, 500);
+				})
+				.catch((e) => {
+					this.$bvToast.toast(e.message, {
+						title: "Error | " + e.code,
+						variant: "danger",
+						toaster: "b-toaster-bottom-right",
+						autoHideDelay: 2500,
+						appendToast: false,
+					});
+				});
 		},
 		onReset(evt) {
 			evt.preventDefault();
