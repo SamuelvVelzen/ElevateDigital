@@ -1,7 +1,28 @@
 <template>
 	<article class="vh-100">
 		<b-container class="w-100 h-100">
-			<h1>Register</h1>
+			<div class="d-flex align-items-center">
+				<h1>Registreren</h1>
+
+				<span class="font-weight-bold ml-auto d-none d-sm-block"
+					>Login</span
+				>
+				<b-iconstack
+					font-scale="3"
+					v-on:click="route('login')"
+					class="ml-sm-2 ml-auto"
+				>
+					<b-icon stacked icon="circle-fill" variant="light"></b-icon>
+					<b-icon
+						icon="arrow-right"
+						font-scale="0.3"
+						variant="dark"
+						shift-h="1"
+						shift-v="-1"
+					></b-icon>
+					<b-icon stacked icon="circle" variant="dark"></b-icon>
+				</b-iconstack>
+			</div>
 
 			<b-container
 				class="d-flex p-0 flex-column flex-sm-row buttons align-items-center justify-content-center"
@@ -41,7 +62,6 @@
 						></b-form-input>
 					</b-form-group>
 
-					<b-link to="/login">Login</b-link>
 					<b-button type="reset" variant="danger" class="ml-auto"
 						>Reset</b-button
 					>
@@ -67,10 +87,13 @@ export default {
 		};
 	},
 	methods: {
+		route(path) {
+			this.$router.push("/" + path);
+		},
 		onSubmit(evt) {
 			evt.preventDefault();
 			this.$router.push("/login");
-			alert(JSON.stringify(this.form));
+			console.log(this.form);
 		},
 		onReset(evt) {
 			evt.preventDefault();
