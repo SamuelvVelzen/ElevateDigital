@@ -72,6 +72,7 @@ nav {
 }
 
 .content {
+	min-height: 100vh;
 	padding-top: 56px;
 	& > * {
 		padding: 1.5rem 15px;
