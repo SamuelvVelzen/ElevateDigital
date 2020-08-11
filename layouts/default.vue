@@ -15,3 +15,9 @@
 	opacity: 0;
 }
 </style>
+
+<style>
+.cursor-pointer {
+	cursor: pointer;
+}
+</style>

@@ -2,14 +2,14 @@
 	<article class="vh-100">
 		<b-container class="w-100 h-100">
 			<div class="d-flex align-items-center">
-				<h1>Inloggen</h1>
+				<h1>Registreren</h1>
 
 				<span class="font-weight-bold ml-auto d-none d-sm-block"
-					>Registreren</span
+					>Login</span
 				>
 				<b-iconstack
 					font-scale="3"
-					v-on:click="route('register')"
+					v-on:click="route('login')"
 					class="ml-sm-2 ml-auto"
 				>
 					<b-icon stacked icon="circle-fill" variant="light"></b-icon>
@@ -25,23 +25,10 @@
 			</div>
 
 			<b-container
-				class="d-flex p-0 flex-column buttons align-items-center justify-content-center"
+				class="d-flex p-0 flex-column flex-sm-row buttons align-items-center justify-content-center"
 			>
-				<div
-					class="d-flex flex-column flex-sm-row w-100 justify-content-center"
-				>
-					<b-button variant="success" class
-						>Inloggen bij Apple</b-button
-					>
-
-					<b-button variant="success" class="mt-4 mt-sm-0 ml-sm-4"
-						>Inloggen bij Google</b-button
-					>
-				</div>
-				<hr class="w-100" />
-
 				<b-form
-					@submit="onSubmit"
+					@submit.prevent="onSubmit"
 					@reset="onReset"
 					v-if="reset"
 					class="w-100"
@@ -50,14 +37,14 @@
 						id="input-group-1"
 						label="E-mail:"
 						label-for="input-1"
-						class="font-weight-bold"
 					>
 						<b-form-input
 							id="input-1"
 							v-model="form.email"
 							required
+							type="email"
 							placeholder="Enter e-mail"
-							autocomplete="email"
+							autocomplete="off"
 						></b-form-input>
 					</b-form-group>
 
@@ -65,8 +52,6 @@
 						id="input-group-2"
 						label="Password:"
 						label-for="input-2"
-						d
-						class="font-weight-bold"
 					>
 						<b-form-input
 							id="input-2"
@@ -74,36 +59,25 @@
 							required
 							type="password"
 							placeholder="Enter password"
-							autocomplete="current-password"
+							autocomplete="new-password"
 						></b-form-input>
 					</b-form-group>
 
-					<div class="d-flex">
-						<b-button type="reset" variant="danger" class="ml-auto"
-							>Reset</b-button
-						>
-						<b-button type="submit" variant="primary" class="ml-4"
-							>Login</b-button
-						>
-					</div>
+					<b-button type="reset" variant="danger" class="ml-auto"
+						>Reset</b-button
+					>
+					<b-button type="submit" variant="primary"
+						>Register</b-button
+					>
 				</b-form>
 			</b-container>
 		</b-container>
 	</article>
 </template>
 
-<style lang="scss" scoped>
-.buttons {
-	height: calc(100% - 56px);
-}
-
-hr {
-	height: 2px;
-	background-color: var(--dark);
-}
-</style>
-
 <script>
+import Auth from "./../assets/logics/auth";
+
 export default {
 	data() {
 		return {
@@ -120,8 +94,32 @@ export default {
 			this.$router.push("/" + path);
 		},
 		onSubmit(evt) {
-			evt.preventDefault();
-			alert(JSON.stringify(this.form));
+			new Auth()
+				.createUser(this.form.email, this.form.password)
+				.then((result) => {
+					this.$router.push("/login");
+					setTimeout(() => {
+						this.$bvToast.toast(
+							`You can log in using ${this.form.email} and your password`,
+							{
+								title: "Success | account created",
+								variant: "success",
+								toaster: "b-toaster-bottom-right",
+								autoHideDelay: 2500,
+								appendToast: false,
+							}
+						);
+					}, 500);
+				})
+				.catch((e) => {
+					this.$bvToast.toast(e.message, {
+						title: "Error | " + e.code,
+						variant: "danger",
+						toaster: "b-toaster-bottom-right",
+						autoHideDelay: 2500,
+						appendToast: false,
+					});
+				});
 		},
 		onReset(evt) {
 			evt.preventDefault();
