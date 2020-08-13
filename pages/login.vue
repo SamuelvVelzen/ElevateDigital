@@ -38,7 +38,11 @@
 				</div>
 				<hr class="w-100" />
 
-				<b-form @submit="onSubmit" @reset="onReset" v-if="reset">
+				<b-form
+					@submit.prevent="onSubmit"
+					@reset="onReset"
+					v-if="reset"
+				>
 					<b-form-group
 						id="input-group-1"
 						label="E-mail:"
@@ -86,10 +90,6 @@
 </template>
 
 <style lang="scss" scoped>
-.buttons {
-	height: calc(100% - 56px);
-}
-
 hr {
 	height: 2px;
 	background-color: var(--dark);
@@ -97,6 +97,8 @@ hr {
 </style>
 
 <script>
+import Auth from "./../assets/logics/auth";
+
 export default {
 	data() {
 		return {
@@ -112,9 +114,37 @@ export default {
 		route(path) {
 			this.$router.push("/" + path);
 		},
-		onSubmit(evt) {
-			evt.preventDefault();
-			alert(JSON.stringify(this.form));
+		onSubmit() {
+			this.$store
+				.dispatch("loginUser", {
+					email: this.form.email,
+					password: this.form.password,
+				})
+				.then((result) => {
+					this.$router.push("/admin");
+
+					setTimeout(() => {
+						this.$bvToast.toast(
+							`You can use the admin section of the website`,
+							{
+								title: "Success | login successful",
+								variant: "success",
+								toaster: "b-toaster-bottom-right",
+								autoHideDelay: 2500,
+								appendToast: false,
+							}
+						);
+					}, 500);
+				})
+				.catch((e) => {
+					this.$bvToast.toast(e.message, {
+						title: "Error | " + e.code,
+						variant: "danger",
+						toaster: "b-toaster-bottom-right",
+						autoHideDelay: 2500,
+						appendToast: false,
+					});
+				});
 		},
 		onReset(evt) {
 			evt.preventDefault();
