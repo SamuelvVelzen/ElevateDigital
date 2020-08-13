@@ -79,6 +79,7 @@
 import Auth from "./../assets/logics/auth";
 
 export default {
+	layout: "auth",
 	data() {
 		return {
 			form: {
@@ -94,8 +95,12 @@ export default {
 			this.$router.push("/" + path);
 		},
 		onSubmit(evt) {
-			new Auth()
-				.createUser(this.form.email, this.form.password)
+			this.$store
+				.dispatch("registerUser", {
+					email: this.form.email,
+					password: this.form.password,
+				})
+
 				.then((result) => {
 					this.$router.push("/login");
 					setTimeout(() => {
