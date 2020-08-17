@@ -131,7 +131,7 @@ const createStore = () => {
 				expirationDate = new Date(parseInt(expirationDate));
 
 				if (new Date() > expirationDate || !token) {
-					vuexContext.dispatch("logout");
+					vuexContext.dispatch("logoutUser");
 					return;
 				}
 
