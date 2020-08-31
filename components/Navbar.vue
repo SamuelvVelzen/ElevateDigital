@@ -15,9 +15,18 @@
 					<b-nav-item v-if="!isAuthenticated()" to="/login"
 						>Inloggen</b-nav-item
 					>
-					<b-nav-item v-else v-on:click="logout"
-						>Uitloggen</b-nav-item
+
+					<b-nav-item-dropdown
+						text="Gebruiker"
+						v-else
+						right
+						:toggle-class="$route.name === 'admin' ? 'active' : ''"
 					>
+						<b-dropdown-item to="/admin">Profiel</b-dropdown-item>
+						<b-dropdown-item v-on:click="logout"
+							>Uitloggen</b-dropdown-item
+						>
+					</b-nav-item-dropdown>
 				</b-navbar-nav>
 			</b-collapse>
 		</b-container>
