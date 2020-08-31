@@ -15,6 +15,7 @@ const createStore = () => {
 			timelineItems: [],
 			introductionItems: [],
 			token: null,
+			user: {},
 		},
 		mutations: {
 			setTimelineItems(state, items) {
@@ -72,6 +73,7 @@ const createStore = () => {
 						return secure
 							.getIdToken()
 							.then((res) => {
+								console.log(res.token);
 								localStorage.setItem("token", res.token);
 								localStorage.setItem(
 									"expiration",
@@ -139,6 +141,9 @@ const createStore = () => {
 			},
 		},
 		getters: {
+			getToken(state) {
+				return state.token;
+			},
 			getTimelineItems(state) {
 				return state.timelineItems;
 			},
