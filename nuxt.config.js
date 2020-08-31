@@ -81,5 +81,6 @@ export default {
 	build: {},
 	env: {
 		fbAPIKey: "AIzaSyCmxiJ70RagOPe1bkWyZJEqsLDdks4E1Sg",
+		unsplashAPIKey: "kXhT1VqDttFOcuQnIBSb6IsN4FILSVdJemvVTctwcFY",
 	},
 };
