@@ -23,6 +23,10 @@ export default class Auth {
 		return firebase.auth().signOut();
 	}
 
+	getUserInfo() {
+		return firebase.auth().currentUser;
+	}
+
 	getIdToken() {
 		return firebase
 			.auth()
