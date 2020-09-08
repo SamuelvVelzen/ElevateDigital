@@ -1,18 +1,21 @@
 <template>
 	<article>
 		<section>
-			<b-container>
-				<span class="title"
-					>Welcome{{
-						!firstTime ? ` ${userInfo.displayName}` : null
-					}}, to your Profile</span
+			<b-container :class="'d-flex align-items-center'" tag="section">
+				<span class="title">
+					Welcome{{ !firstTime ? ` ${userInfo.displayName}` : null }},
+					to your Profile
+				</span>
+
+				<b-button to="/admin/profile/edit" :class="'ml-auto'"
+					>Edit profile</b-button
 				>
 			</b-container>
 
 			<b-container v-if="firsTime">
 				<p>
-					Hiet ziet er naar uit dat ik je nog niet goed ken. Vul
-					hieronder alstublieft uw informatie aan
+					Hiet ziet er naar uit dat wij je nog niet goed kennen. Vul
+					hieronder alstublieft uw informatie aan.
 				</p>
 
 				<b-form @submit="onSubmit" @reset="onReset" v-if="show">
